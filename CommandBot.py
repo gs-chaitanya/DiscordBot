@@ -30,10 +30,9 @@ def get_quote():
 
 
 def get_comic():
-    resp = requests.get(f"https://xkcd.com/{random.randint(0, 2522)}/info.0.json")
+    resp = requests.get("https://xkcd.com/info.0.json")
     data = resp.json()
-    title = f'xkcd #{data.get("num")} - {data.get("title")}'
-    myembed = discord.Embed(title=title, url=f'https://xkcd.com/{data.get("num")}')
+    myembed = discord.Embed(color=0x000000)
     myembed.set_image(url=data['img'])  # making embed
     return myembed
 
