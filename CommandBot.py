@@ -5,6 +5,10 @@ import os
 import random
 import requests
 import json
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
 
 client = commands.Bot(command_prefix="_")
 namelist = {"Daedalus": "Chaitanya", "CykaPenguin117": "Shaashwat", "Diabolical": "Lakshita",
@@ -192,4 +196,4 @@ Not only am I extensively trained in unarmed combat, but I have access to the en
 But you couldn’t, you didn’t, and now you’re paying the price, you goddamn idiot. I will shit fury all over you and you will drown in it.""")
 
 
-client.run('ODkwMjgxODc0MTg5MDc4NTg4.YUthmw.e3TdNubwR3n855AecH1Dy7ffkrc')
+client.run('TOKEN')
