@@ -182,6 +182,8 @@ async def pledge(ctx):
 async def amisafe(ctx):
     if str(namelist.get(ctx.message.author.name)) in safepeople:
         await ctx.send("You are safe")
+    else:
+        await ctx.send("You are in Danger. Surrender to me")
 
 
 @client.command()
