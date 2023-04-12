@@ -64,7 +64,7 @@ async def play(ctx, url: str):
         if song_there:
             os.remove("song.mp3")
     except PermissionError:
-        await ctx.send("Please pause the song first. Have some patience. Have you learnt nothing from Kung Fu Panda ?")
+        await ctx.send("Please pause the song first. Have some patience.")
         return
 
     ydl_opts = {
@@ -121,11 +121,6 @@ async def stop(ctx):
 @client.command()
 async def die(ctx):
     await ctx.send("bruh i'm already dead inside")
-
-
-@client.command()
-async def doyoulikenazis(ctx):
-    await ctx.send("I absolutely just *adore* men in uniform")
 
 
 @client.command()
